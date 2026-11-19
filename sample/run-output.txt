@@ -1,0 +1,20 @@
+# SIMULATED_FAILURE_RATE=0.7 java -jar target/post-scheduler.jar
+# then: for i in 1 2 3; do curl -s -X POST localhost:8080/posts -d "{\"channel\":\"linkedin\",\"text\":\"Post $i\"}"; done
+2026-11-18T19:43:00-0700 INFO postscheduler.App - listening on port 8080, checking for due posts every 1000 ms
+2026-11-18T19:43:02-0700 INFO postscheduler.HttpApi - post f572bbb2-2840-41e5-9662-0d948d0fc86b scheduled on linkedin for 2026-11-19T02:43:02.009519Z
+2026-11-18T19:43:02-0700 INFO postscheduler.HttpApi - post b2c6c7ea-9fd6-4632-b5ae-084139815d50 scheduled on linkedin for 2026-11-19T02:43:02.045828Z
+2026-11-18T19:43:02-0700 INFO postscheduler.HttpApi - post 845397cc-870d-4a59-bc84-86628089696e scheduled on linkedin for 2026-11-19T02:43:02.055804Z
+2026-11-18T19:43:02-0700 INFO postscheduler.Dispatcher - post f572bbb2-2840-41e5-9662-0d948d0fc86b attempt 1 failed (simulated timeout from linkedin); retry at 2026-11-19T02:43:03.587422Z
+2026-11-18T19:43:02-0700 INFO postscheduler.Dispatcher - post b2c6c7ea-9fd6-4632-b5ae-084139815d50 attempt 1 failed (simulated timeout from linkedin); retry at 2026-11-19T02:43:03.588627Z
+2026-11-18T19:43:02-0700 INFO postscheduler.Dispatcher - post 845397cc-870d-4a59-bc84-86628089696e attempt 1 failed (simulated timeout from linkedin); retry at 2026-11-19T02:43:03.589130Z
+2026-11-18T19:43:03-0700 INFO postscheduler.Dispatcher - post f572bbb2-2840-41e5-9662-0d948d0fc86b attempt 2 failed (simulated timeout from linkedin); retry at 2026-11-19T02:43:05.592581Z
+2026-11-18T19:43:03-0700 INFO postscheduler.Dispatcher - post b2c6c7ea-9fd6-4632-b5ae-084139815d50 attempt 2 failed (simulated timeout from linkedin); retry at 2026-11-19T02:43:05.596169Z
+2026-11-18T19:43:03-0700 INFO postscheduler.Dispatcher - post 845397cc-870d-4a59-bc84-86628089696e attempt 2 failed (simulated timeout from linkedin); retry at 2026-11-19T02:43:05.597243Z
+2026-11-18T19:43:05-0700 INFO postscheduler.Dispatcher - post f572bbb2-2840-41e5-9662-0d948d0fc86b attempt 3 failed (simulated timeout from linkedin); retry at 2026-11-19T02:43:09.603936Z
+2026-11-18T19:43:05-0700 INFO postscheduler.Dispatcher - post b2c6c7ea-9fd6-4632-b5ae-084139815d50 attempt 3 failed (simulated timeout from linkedin); retry at 2026-11-19T02:43:09.604628Z
+2026-11-18T19:43:05-0700 INFO postscheduler.Dispatcher - post 845397cc-870d-4a59-bc84-86628089696e attempt 3 failed (simulated timeout from linkedin); retry at 2026-11-19T02:43:09.604864Z
+2026-11-18T19:43:09-0700 INFO postscheduler.Dispatcher - post f572bbb2-2840-41e5-9662-0d948d0fc86b attempt 4 failed (simulated timeout from linkedin); retry at 2026-11-19T02:43:17.625348Z
+2026-11-18T19:43:09-0700 INFO postscheduler.Dispatcher - post b2c6c7ea-9fd6-4632-b5ae-084139815d50 published on linkedin as linkedin-fabd14c4 (attempt 4)
+2026-11-18T19:43:09-0700 INFO postscheduler.Dispatcher - post 845397cc-870d-4a59-bc84-86628089696e attempt 4 failed (simulated timeout from linkedin); retry at 2026-11-19T02:43:17.626126Z
+2026-11-18T19:43:17-0700 INFO postscheduler.Dispatcher - post f572bbb2-2840-41e5-9662-0d948d0fc86b published on linkedin as linkedin-481a666c (attempt 5)
+2026-11-18T19:43:17-0700 WARNING postscheduler.Dispatcher - post 845397cc-870d-4a59-bc84-86628089696e failed after 5 attempts: simulated timeout from linkedin
